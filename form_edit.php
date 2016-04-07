@@ -14,7 +14,7 @@
             $baris = $hasil->fetch_assoc();
         ?>
         
-        <form action="form_edit.php" method="post">
+        <form action="form_edit.php?npm=$npm" method="post">
             <input value="<?php echo $baris['nama']; ?>" type="text" name="nama_mhs" placeholder="Masukkan Nama" size="30" required="required"><br>
             <input value="<?php echo $baris['npm']; ?>" type="text" name="nim_mhs" placeholder="Masukkan NIM" size="30" disabled="disabled"><br>
             <input value="<?php echo $baris['tl']; ?>" type="date" name="tgl_mhs" placeholder="Masukkan Tanggal Lahir" size="30" required="required"><br>

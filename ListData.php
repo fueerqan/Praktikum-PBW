@@ -58,7 +58,7 @@
                     </div>
                     <div class="modal-body">
                         Apakah yakin ingin menghapus data?<br>
-                        <a href="" class="btn btn-success">Ya</a>
+                        <a href="" id="hapus" class="btn btn-success">Ya</a>
                     </div>
                 </div>
             </div>
@@ -69,6 +69,7 @@
         <script>
             function tampilinModal(id){
                 $("#pemberitahuan").modal("show");
+                $("#hapus").attr("href", "hapus.php?npm=" + id);
             }
         </script>
     </body>

@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE>
 <html>
     <head>
@@ -23,7 +26,8 @@
                 $hasil = $db->query($sql);
                 
                 if($hasil->num_rows > 0){
-                    echo 'Login berhasil';
+                    $_SESSION['npm'] = $nim;
+                    header("location:Dashboard.php");
                 }else{
                     echo 'Cek pass / nim';
                 }
